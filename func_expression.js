@@ -1,6 +1,7 @@
 function ask(question,bilubilu,chuba){
     if(confirm(question)) bilubilu();
     else chuba();
+    debugger;
 }
 
 function showOk() {
