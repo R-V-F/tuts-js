@@ -17,14 +17,16 @@ user[id1] = "sharingan";
 
 //Ex: client eh um obj complexo
 
-let client = {
-    id: 3210321,
-}
+
 
 //se vc quiser adicionar uma prop id ao obj, usando symbols nao modifcia o obj original
 
 let id = Symbol("id");
 
-client[id] = 321;
+
+let client = {
+    id: 3210321,
+    [id]: 12
+}
 
 alert(client.id);
