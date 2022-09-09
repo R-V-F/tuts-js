@@ -11,3 +11,5 @@
 
 //u can treat arrays as objs (ex: arr.isCool = true;), but this will
 //lead to bugs
+
+//
