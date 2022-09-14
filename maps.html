@@ -1,0 +1,31 @@
+<script>
+    let obj = {
+        name: "aa",
+        age: 32
+    }
+    // OBJS CAN BE USED AS KEYS IN MAPS ****
+    let map = new Map();
+    map.set(obj, 'lmao');
+    // MAPS SEPARATE KEYS BY TYPE, WHILE OBJS TRANSFORMS ALL TO STRNG
+
+    // Iterating
+    /*
+    map.keys() -> return iterable with keys
+    map.values() -> return iterable with values
+    map.entries() -> return iterable for entries
+    */
+   for (let keys of map.keys()) {
+    console.log(keys);
+   }
+   for (let values of map.values()) {
+    console.log(values);
+   }
+   for (let entries of map.entries()) { // same as for (let entries of obj)
+    console.log(entries)
+   }
+
+   // Making a map out of an obj
+   let nmap = new Map(Object.entries(obj));
+   console.log(nmap.get('name'));
+
+</script>
