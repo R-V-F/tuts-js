@@ -1,0 +1,18 @@
+<script>
+    let set = new Set();
+    // Sets are like arrays that can't have repated entries;
+    let ana = {name: "ana"};
+    let anana = {name: "anana"};
+    let anaba = {name: "anaba"};
+    set.add(ana);
+    set.add(ana);
+    set.add(anaba);
+    set.add(anaba);
+    set.add(anana);
+    console.log(set.size); // 3
+    // Iterating
+    // set.keys() is equal to set.values() for compatibility with map
+    for (let i of set.keys()) {
+        console.log(i.name);
+    }
+</script>
