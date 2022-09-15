@@ -1,0 +1,23 @@
+<script>
+    let weakmap = new WeakMap();
+    let map = new Map();
+
+    let obj = {name: "marie"};
+    //WEAK MAPS ONLY ACCEPT OBJ AS ENTRIES
+    weakmap.set(obj, "jojo");
+    map.set(obj, "joja");
+    for(let keys of map.values()) {
+        console.log(keys);
+    }
+    //WEAK MAPS HAVE NO .KEYS(), .ENTRIES(), .VALUES()
+    console.log(weakmap.has(obj));
+
+    //WEAK MAPS DELETE FROM MEMORY WHEN THE OBJ THEY ARE REFERENCING
+    //CANNOT BE REACHED ANYMORE
+    obj = null;
+
+    console.log(weakmap.has(obj));
+    console.log(map.keys().next().value);
+
+
+</script>
