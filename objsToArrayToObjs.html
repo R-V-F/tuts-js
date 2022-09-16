@@ -1,0 +1,17 @@
+<script>
+    let obj = {
+        name: "kaokrow",
+        age: 32,
+    }
+
+    //Transform obj -> array
+
+    let obj_arr = Object.entries(obj);
+    console.log(obj_arr);
+
+    //Transform Arr -> obj
+
+    let double_age_obj = Object.fromEntries(obj_arr);
+    console.log(double_age_obj.age);
+
+</script>
