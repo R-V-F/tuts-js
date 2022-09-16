@@ -1,0 +1,26 @@
+<script>
+    let arr = [1,3,4,5,"32131","arroz"];
+    arr.forEach((i,ind,ar)=>{
+        console.log(`item: ${i}, index: ${ind}, array: ${ar}`);
+    });
+
+    let arr_objs = [
+        {},
+        {name: "maria",},
+        {id: 32}
+    ];
+    //FIND will return item when the condition is true and stop iteration
+    let obj = arr_objs.find((item) => item.name == 'maria');
+
+    console.log(obj.name);
+
+    //Map will apply the function to each item and return an array (it's similar to find, but returns an array instead of item)
+    let arr2 = arr_objs.map(item => {
+        if(item.name == 'maria') return "chiquinha";
+        else return "nhiooo";
+    });
+    console.log(arr2);
+    
+
+
+</script>
