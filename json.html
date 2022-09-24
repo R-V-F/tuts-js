@@ -1,0 +1,18 @@
+<script>
+    let obj = {
+        group: "B",
+        participants: [{name: "lara", age: 50},{name: "lar", age: 30},{name: "lra", age: 20}],
+        number: function() {
+            return this.participants.length;
+        }
+    }
+    console.log(JSON.stringify(obj));
+    //REPLACER
+
+    console.log(
+        JSON.stringify(obj, (key,value) => {
+            return (key=='group') ? undefined : value;
+        })
+    );
+
+</script>
